@@ -1,20 +1,24 @@
 spring:
-  application:
-    name: his-cloud-api-admin
-  thymeleaf:
-    cache: false
-    mode: LEGACYHTML5
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
+    application:
+      name: his-cloud-api-app
+    thymeleaf:
+      cache: false
+      mode: LEGACYHTML5
+      encoding: UTF-8
+      servlet:
+        content-type: text/html
+
 
 server:
-  port: 8764
+  port: 8765
+
+
+feign:  #添加熔断
+  hystrix:
+    enabled: true
+
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-    instance:
-      leaseRenewalIntervalInSeconds: 10
-      leaseExpirationDurationInSeconds: 30
