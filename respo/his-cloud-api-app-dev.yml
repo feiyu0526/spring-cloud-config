@@ -13,8 +13,9 @@ spring:
     admin:
       client:
         url: http://localhost:8084
+
 server:
-  port: 8765
+  port: 8777
 
 feign:  #添加熔断
   hystrix:
