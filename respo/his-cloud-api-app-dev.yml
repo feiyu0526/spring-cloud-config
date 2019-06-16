@@ -20,7 +20,7 @@ feign:  #添加熔断
   hystrix:
     enabled: true
 
-rabbitmq:    					        #本地环境不需要配置mq
+rabbitmq:
   host: localhost
   port: 5672
   username: guest
@@ -39,3 +39,6 @@ management:
     endpoint:
       health:
         show-details: ALWAYS   #health endpoint是否必须显示全部细节
+
+test:
+  test: test
